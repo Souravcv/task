@@ -86,7 +86,7 @@ class SignUpWidget extends StatelessWidget {
                     final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
                      await provider.googleLogin().then((value) {
                            Navigator.push(context,
-                          MaterialPageRoute(builder: (context) =>const LoggedinWidget()));
+                          MaterialPageRoute(builder: (context) => LoggedinWidget()));
                           final text = "success with name and email";
                           final snackbar = SnackBar(content: Text(text));
                           ScaffoldMessenger.of(context).showSnackBar(snackbar);

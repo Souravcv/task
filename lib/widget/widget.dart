@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 TextFormField reusableTextField(String text, IconData icon,
@@ -9,9 +7,9 @@ TextFormField reusableTextField(String text, IconData icon,
     obscureText: isPasswordeType,
     autocorrect: isPasswordeType,
     enableSuggestions: !isPasswordeType,
-    cursorColor:const Color.fromARGB(255, 120, 50, 177),
+    cursorColor: const Color.fromARGB(255, 120, 50, 177),
     style: TextStyle(
-      color:const Color.fromARGB(255, 0, 0, 0).withOpacity(0.9),
+      color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.9),
     ),
     decoration: InputDecoration(
       prefixIcon: Icon(
@@ -19,10 +17,11 @@ TextFormField reusableTextField(String text, IconData icon,
         color: Colors.white70,
       ),
       labelText: text,
-      labelStyle: TextStyle(color:const Color.fromARGB(255, 114, 128, 128).withOpacity(0.9)),
+      labelStyle: TextStyle(
+          color: const Color.fromARGB(255, 114, 128, 128).withOpacity(0.9)),
       filled: true,
       floatingLabelBehavior: FloatingLabelBehavior.never,
-      fillColor:const Color.fromARGB(255, 26, 190, 114).withOpacity(0.3),
+      fillColor: const Color.fromARGB(255, 26, 190, 114).withOpacity(0.3),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(30.0),
         borderSide: const BorderSide(width: 0, style: BorderStyle.none),
