@@ -6,7 +6,6 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:interview_task/data/healper.dart';
 import 'package:interview_task/data/user_model.dart';
-import 'package:interview_task/screens/de.dart';
 
 class LoggedinWidget extends StatefulWidget {
   LoggedinWidget({super.key});
@@ -196,14 +195,13 @@ class _LoggedinWidgetState extends State<LoggedinWidget> {
                         if (formKey.currentState!.validate()) {
                           final snackbar = SnackBar(content: Text("okkkkkk"));
                           print("jsdvfjsvfjsvjdv,jhfb fdv d");
-                          // create();
+                          create();
                           final user = UserModel(
                               name: namecontroller.text,
                               email: emailcontroller.text,
                               phone: phonecontroller.text,
                               passworde: passwordecontroller.text);
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => St()));
+                        
                         }
                       },
                       child: const Text("click")),
@@ -250,15 +248,15 @@ class _LoggedinWidgetState extends State<LoggedinWidget> {
         ));
   }
 
-  // create() async {
-  //   final userCollection = FirebaseFirestore.instance.collection("users");
-  //   final docRef = userCollection.doc('users');
+  create() async {
+    final userCollection = FirebaseFirestore.instance.collection("users");
+    final docRef = userCollection.doc('users');
 
-  //   await docRef.set({
-  //   "name": namecontroller.text,
-  //   "email": emailcontroller.text,
-  //   "phone": phonecontroller.text,
-  //   "Password":passwordecontroller.text,
-  //   });
-  // }
+    await docRef.set({
+    "name": namecontroller.text,
+    "email": emailcontroller.text,
+    "phone": phonecontroller.text,
+    "Password":passwordecontroller.text,
+    });
+  }
 }
